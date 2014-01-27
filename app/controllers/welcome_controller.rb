@@ -4,4 +4,10 @@ class WelcomeController < ApplicationController
 
   def about
   end
+
+  def residential
+  end
+
+  def testimonial
+  end
 end

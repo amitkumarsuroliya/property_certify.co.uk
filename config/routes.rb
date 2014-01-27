@@ -1,7 +1,9 @@
 PropertyCertifyCoUk::Application.routes.draw do
   
   get "about", to: 'welcome#about'
-  
+  get "residential", to: 'welcome#residential'
+  get "testimonial", to: 'welcome#testimonial'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

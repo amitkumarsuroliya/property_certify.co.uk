@@ -6,4 +6,12 @@ module ApplicationHelper
     	link_to link_text, link_path
   	end
 	end
+
+	def testimonial(text, name)
+		class_name = cycle('pull-right', 'pull-left')
+		content_tag(:blockquote, :class => class_name) do
+			content_tag(:p, text) +
+			content_tag(:small, name)
+		end
+	end
 end
