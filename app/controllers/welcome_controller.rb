@@ -10,4 +10,7 @@ class WelcomeController < ApplicationController
 
   def testimonial
   end
+
+  def contact
+  end
 end
