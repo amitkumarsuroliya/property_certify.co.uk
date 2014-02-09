@@ -1,0 +1,5 @@
+Name          :     <%= @contact.name %>
+Email         :     <%= @contact.email %>
+Address       :     <%= @contact.address %>
+Phone Number  :     <%= @contact.phone_number %>
+Meeting time  :     <%= @contact.when %> at <%= @contact.time %>

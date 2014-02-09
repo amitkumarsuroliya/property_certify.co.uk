@@ -1,0 +1,15 @@
+<div id="flash_messages">
+  <% flash.each do |key, value| %>
+    <% if () %>
+      <% success_class = "alert-success" %>
+    <% else %>
+      <% error_class = "alert-error" %>
+    <% end %>
+    <div class="alert alert-success alert-dismissable" >
+      <a class="close" data-dismiss="alert" href="#">×
+      </a>
+      <i class="icon-ok-sign"></i>
+      <%= value %>
+    </div>
+  <% end %>
+</div>
