@@ -6,6 +6,7 @@ PropertyCertifyCoUk::Application.routes.draw do
   get "contact", to: "welcome#contact"
   get "commercial", to: "welcome#commercial"
   post "property_info", to: "welcome#property_info"
+  post "enquiry_info", to: "welcome#enquiry_info"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

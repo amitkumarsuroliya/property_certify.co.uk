@@ -1,20 +1,55 @@
-<form role="form">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+<%= simple_form_for(@enquiry, :url => "/enquiry_info", :method => "post") do |f| %>
+  <%= render 'shared/flash_messages' if !flash.empty? %>
+  <% if @enquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+
+      <ul>
+      <% @enquiry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-md-2"><%= f.label :name %></div>
+      <div class="col-md-10">
+        <%= f.text_field(:name) %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="telephone">Telephone</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
+  <br/>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-md-2"><%= f.label :telephone %></div>
+      <div class="col-md-10">
+        <%= f.text_field(:telephone) %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
-    <span class="help-block">Your email which we can use to contact you.</span>
+  <br/>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-md-2"><%= f.label :email %></div>
+      <div class="col-md-10">
+        <%= f.text_field(:email) %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="inquiry">Enquiry</label>
-    <textarea class="form-control" rows="10"></textarea>
-    <span class="help-block">Please type your message or request here</span>
+  <br/>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-md-2"><%= f.label :enquiry %></div>
+      <div class="col-md-10">
+        <%= f.text_area(:enquiry) %>
+      </div>
+    </div>
   </div>
-</form>
+  <br/><br/>
+  <div style="background-color: black; margin-left: 0px; margin-right: 0px;" class="form-group">
+    <div class="col-md-offset-2 col-sm-10">
+      <%= f.submit  "Submit", :class => "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
