@@ -30,7 +30,7 @@
 <div>
 <div class="row">
   <div class="col-sm-12">
-    <%= form_for(@contact, :url => "/property_info", :method => "post") do |f| %>
+    <%= simple_form_for(@contact, :url => "/property_info", :method => "post") do |f| %>
     <%= render 'shared/flash_messages' if !flash.empty? %>
       <% if @contact.errors.any? %>
         <div id="error_explanation">
@@ -140,10 +140,21 @@
         </div>
       </div>
       <br/>
-      <br/><br/>
-      <div class="form-action" style="margin-left: 224px;">
-        <%= f.submit  "Submit", :class => "btn btn-success" %>
+      <div style="background-color: black; margin-left: 0px; margin-right: 0px;" class="form-group">
+        <div class="col-md-offset-2 col-sm-10">
+          <%= f.submit  "Submit", :class => "btn btn-success" %>
+        </div>
       </div>
     <% end %>
+    <div class="col-md-offset-2 col-sm-10">
+      <div class="password-warning">Never submit passwords through Google Forms.</div>
+      <div class="ss-footer"><div class="ss-attribution"></div>
+      <div class="ss-legal"><span class="ss-powered-by">Powered by <a href="http://docs.google.com">Google Docs</a></span>
+      <span class="ss-terms"><small><a href="https://spreadsheets.google.com/spreadsheet/reportabuse?pli=1&amp;hl=en_GB&amp;bc=transparent&amp;f=Arial%252C%2BVerdana%252C%2Bsans-serif&amp;hl=en_GB&amp;htc=%2523666666&amp;key=0AsXMMvBKGqckdDJsend5cW94SkVQeFRtSWVFVWh2blE&amp;lc=%2523336699&amp;pli=1&amp;tc=%2523333333&amp;ttl=0&amp;source=https://spreadsheets.google.com/spreadsheet/embeddedform?bc%3Dtransparent%26f%3DArial%25252C%252BVerdana%25252C%252Bsans-serif%26hl%3Den_GB%26htc%3D%252523666666%26key%3D0AsXMMvBKGqckdDJsend5cW94SkVQeFRtSWVFVWh2blE%26lc%3D%252523336699%26pli%3D1%26tc%3D%252523333333%26ttl%3D0">Report Abuse</a>
+      -
+      <a href="http://www.google.com/accounts/TOS">Terms of Service</a>
+      -
+      <a href="http://www.google.com/google-d-s/terms.html">Additional Terms</a></small></span></div></div></div>
+    </div>
   </div>
 </div>
