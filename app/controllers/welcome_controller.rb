@@ -23,7 +23,7 @@ class WelcomeController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       WelcomeMailer.registration_confirmation(@contact).deliver
-      flash[:notice] = "Contact is create"
+      flash[:notice] = "An Email has been sent, We will contact u soon"
     else
       flash[:error] = "Error updating Contacts"
     end

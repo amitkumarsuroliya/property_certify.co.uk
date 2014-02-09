@@ -31,6 +31,7 @@
 <div class="row">
   <div class="col-sm-12">
     <%= form_for(@contact, :url => "/property_info", :method => "post") do |f| %>
+    <%= render 'shared/flash_messages' if !flash.empty? %>
       <% if @contact.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this applicant from being saved:</h2>
