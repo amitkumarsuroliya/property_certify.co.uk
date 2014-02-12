@@ -69,6 +69,18 @@ PropertyCertifyCoUk::Application.configure do
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
 
+  config.action_mailer.default_url_options = { :protocol => 'https', :host => "greenepcdeal.co.uk" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => "anu.n.com@gmail.com",
+    :password => "amit@70%",
+    :domain => "greenepcdeal.co.uk",
+    :address => "smtp.sendgrid.net",
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
