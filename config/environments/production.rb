@@ -75,7 +75,6 @@ PropertyCertifyCoUk::Application.configure do
     :user_name => "anu.n.com@gmail.com",
     :password => "amit@70%",
     :domain => "greenepcdeal.co.uk",
-    :address => "smtp.sendgrid.net",
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
