@@ -5,7 +5,7 @@ require "bundler/capistrano"
 server "178.79.137.54", :web, :app, :db, primary: true
 
 set :application, "property_certify.co.uk"
-set :user, "akashsoti"
+set :user, "justlights"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
